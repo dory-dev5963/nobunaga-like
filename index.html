@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戦国覇道 - Browser Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- タイトル画面 -->
+    <div id="title-screen" class="screen active">
+        <div class="title-container">
+            <h1 class="game-title">戦国覇道</h1>
+            <p class="subtitle">Browser Edition</p>
+            <button id="new-game-btn" class="menu-btn">新規ゲーム</button>
+            <button id="load-game-btn" class="menu-btn">ゲームをロード</button>
+        </div>
+    </div>
+
+    <!-- 大名選択画面 -->
+    <div id="lord-select-screen" class="screen">
+        <div class="select-container">
+            <h2>大名を選択してください</h2>
+            <div id="lord-list" class="lord-list"></div>
+            <button id="start-game-btn" class="menu-btn">ゲーム開始</button>
+            <button id="back-to-title-btn" class="menu-btn secondary">戻る</button>
+        </div>
+    </div>
+
+    <!-- メインゲーム画面 -->
+    <div id="game-screen" class="screen">
+        <!-- ヘッダー -->
+        <div class="game-header">
+            <div class="date-display">
+                <span id="current-year">1560</span>年
+                <span id="current-month">1</span>月
+            </div>
+            <div class="player-info">
+                <img id="player-portrait" class="portrait-small" src="" alt="">
+                <span id="player-name"></span>
+            </div>
+            <div class="resources">
+                <span>金: <span id="player-gold">0</span></span>
+                <span>米: <span id="player-rice">0</span></span>
+            </div>
+        </div>
+
+        <!-- メインコンテンツ -->
+        <div class="game-content">
+            <!-- 日本地図 -->
+            <div class="map-container">
+                <svg id="japan-map" viewBox="0 0 800 1000">
+                    <!-- 地図はJavaScriptで動的に生成 -->
+                </svg>
+            </div>
+
+            <!-- 情報パネル -->
+            <div class="info-panel">
+                <div id="territory-info" class="panel-section">
+                    <h3>国情報</h3>
+                    <div id="territory-details">
+                        <p>国を選択してください</p>
+                    </div>
+                </div>
+
+                <div id="action-panel" class="panel-section">
+                    <h3>行動</h3>
+                    <div id="action-buttons">
+                        <!-- 動的に生成 -->
+                    </div>
+                </div>
+
+                <div id="log-panel" class="panel-section">
+                    <h3>ログ</h3>
+                    <div id="game-log" class="log-content">
+                        <p>ゲーム開始</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- コマンドバー -->
+        <div class="command-bar">
+            <button id="internal-btn" class="command-btn">内政</button>
+            <button id="military-btn" class="command-btn">軍事</button>
+            <button id="diplomacy-btn" class="command-btn">外交</button>
+            <button id="save-btn" class="command-btn">セーブ</button>
+            <button id="next-turn-btn" class="command-btn primary">次のターン</button>
+        </div>
+    </div>
+
+    <!-- 内政画面モーダル -->
+    <div id="internal-modal" class="modal">
+        <div class="modal-content">
+            <h2>内政</h2>
+            <div id="internal-commands">
+                <button class="internal-cmd" data-action="agriculture">農業開発</button>
+                <button class="internal-cmd" data-action="commerce">商業発展</button>
+                <button class="internal-cmd" data-action="security">治安維持</button>
+                <button class="internal-cmd" data-action="recruit">兵士募集</button>
+            </div>
+            <div id="officer-select">
+                <h3>担当武将を選択</h3>
+                <div id="officer-list"></div>
+            </div>
+            <button id="close-internal-btn" class="menu-btn secondary">閉じる</button>
+        </div>
+    </div>
+
+    <!-- 軍事画面モーダル -->
+    <div id="military-modal" class="modal">
+        <div class="modal-content">
+            <h2>軍事</h2>
+            <div id="military-info">
+                <p>攻撃する隣接国を選択してください</p>
+            </div>
+            <div id="target-list"></div>
+            <div id="army-config">
+                <h3>出陣設定</h3>
+                <label>兵数: <input type="number" id="troop-count" min="0"></label>
+                <h3>指揮官を選択</h3>
+                <div id="commander-list"></div>
+            </div>
+            <button id="attack-btn" class="menu-btn">攻撃開始</button>
+            <button id="close-military-btn" class="menu-btn secondary">閉じる</button>
+        </div>
+    </div>
+
+    <!-- 外交画面モーダル -->
+    <div id="diplomacy-modal" class="modal">
+        <div class="modal-content">
+            <h2>外交</h2>
+            <div id="diplomacy-list"></div>
+            <button id="close-diplomacy-btn" class="menu-btn secondary">閉じる</button>
+        </div>
+    </div>
+
+    <!-- 戦闘結果モーダル -->
+    <div id="battle-result-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="battle-result-title">戦闘結果</h2>
+            <div id="battle-result-content"></div>
+            <button id="close-battle-result-btn" class="menu-btn">閉じる</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
