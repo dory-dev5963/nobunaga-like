@@ -229,41 +229,82 @@ body {
 .map-container {
     flex: 2;
     padding: 20px;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 40%, #FFF8DC 60%, #F5E6D3 100%);
+    position: relative;
+}
+
+.zoom-controls {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.zoom-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #d4af37;
+    border-radius: 5px;
+    color: #d4af37;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zoom-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
 #japan-map {
     width: 100%;
-    height: auto;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    height: 100%;
+    cursor: grab;
 }
 
-.territory {
-    stroke: #2c1810;
-    stroke-width: 2;
+#japan-map:active {
+    cursor: grabbing;
+}
+
+.territory-shape {
     cursor: pointer;
     transition: all 0.3s;
+    opacity: 0.85;
+    stroke: #654321;
+    stroke-width: 2.5;
 }
 
-.territory:hover {
+.territory-shape:hover {
     filter: brightness(1.3);
     stroke: #ffd700;
-    stroke-width: 3;
+    stroke-width: 4;
+    opacity: 1;
 }
 
-.territory.selected {
+.territory-shape.selected {
     stroke: #ffd700;
-    stroke-width: 4;
-    filter: brightness(1.2);
+    stroke-width: 5;
+    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    opacity: 1;
 }
 
 .territory-label {
     pointer-events: none;
     font-size: 14px;
-    fill: #000;
-    text-shadow: 0 0 3px #fff;
+    fill: #2c1810;
+    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff;
     font-weight: bold;
+    letter-spacing: 0.05em;
 }
 
 /* 情報パネル */
@@ -445,7 +486,39 @@ body {
     text-align: center;
 }
 
-.internal-cmd:hover, .officer-item:hover, .commander-item:hover {
+.officer-item, .commander-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.officer-portrait {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #8b4513;
+    margin-bottom: 10px;
+}
+
+.officer-portrait-small {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #8b4513;
+    margin-bottom: 5px;
+}
+
+.officer-info {
+    width: 100%;
+}
+
+.officer-item.acted, .commander-item.acted {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(70, 40, 10, 0.3);
+}
+
+.internal-cmd:hover, .officer-item:hover:not(.acted), .commander-item:hover:not(.acted) {
     background: rgba(139, 69, 19, 0.5);
     border-color: #d4af37;
 }

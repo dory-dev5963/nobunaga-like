@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>戦国覇道 - Browser Edition</title>
     <link rel="stylesheet" href="style.css">
+    <script src="audio.js"></script>
+    <script src="portraits.js"></script>
+    <script src="map-shapes.js"></script>
+    <script src="zoom-control.js"></script>
 </head>
 <body>
     <!-- タイトル画面 -->
@@ -49,7 +53,12 @@
         <div class="game-content">
             <!-- 日本地図 -->
             <div class="map-container">
-                <svg id="japan-map" viewBox="0 0 800 1000">
+                <div class="zoom-controls">
+                    <button id="zoom-in-btn" class="zoom-btn" title="拡大">+</button>
+                    <button id="zoom-out-btn" class="zoom-btn" title="縮小">-</button>
+                    <button id="zoom-reset-btn" class="zoom-btn" title="リセット">◉</button>
+                </div>
+                <svg id="japan-map" viewBox="100 150 600 600">
                     <!-- 地図はJavaScriptで動的に生成 -->
                 </svg>
             </div>
@@ -85,6 +94,7 @@
             <button id="military-btn" class="command-btn">軍事</button>
             <button id="diplomacy-btn" class="command-btn">外交</button>
             <button id="save-btn" class="command-btn">セーブ</button>
+            <button id="mute-btn" class="command-btn">🔊</button>
             <button id="next-turn-btn" class="command-btn primary">次のターン</button>
         </div>
     </div>

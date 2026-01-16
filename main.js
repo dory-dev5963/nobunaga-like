@@ -12,7 +12,7 @@ const TERRITORIES = {
         gold: 3000,
         troops: 2000,
         neighbors: ['mino', 'mikawa', 'ise'],
-        x: 400, y: 450
+        x: 520, y: 480
     },
     mino: {
         id: 'mino',
@@ -22,7 +22,7 @@ const TERRITORIES = {
         gold: 2500,
         troops: 1800,
         neighbors: ['owari', 'omi', 'echizen', 'hida'],
-        x: 380, y: 400
+        x: 500, y: 440
     },
     mikawa: {
         id: 'mikawa',
@@ -32,7 +32,7 @@ const TERRITORIES = {
         gold: 2000,
         troops: 1500,
         neighbors: ['owari', 'totomi', 'shinano'],
-        x: 440, y: 470
+        x: 560, y: 490
     },
     kai: {
         id: 'kai',
@@ -42,7 +42,7 @@ const TERRITORIES = {
         gold: 2500,
         troops: 2500,
         neighbors: ['shinano', 'suruga', 'sagami', 'musashi'],
-        x: 480, y: 450
+        x: 590, y: 460
     },
     echigo: {
         id: 'echigo',
@@ -52,7 +52,7 @@ const TERRITORIES = {
         gold: 3000,
         troops: 3000,
         neighbors: ['etchu', 'shinano', 'kozuke', 'mutsu'],
-        x: 450, y: 330
+        x: 560, y: 360
     },
     omi: {
         id: 'omi',
@@ -62,7 +62,7 @@ const TERRITORIES = {
         gold: 2500,
         troops: 1500,
         neighbors: ['mino', 'echizen', 'yamashiro', 'ise'],
-        x: 370, y: 430
+        x: 480, y: 470
     },
     yamashiro: {
         id: 'yamashiro',
@@ -72,7 +72,7 @@ const TERRITORIES = {
         gold: 5000,
         troops: 1000,
         neighbors: ['omi', 'yamato', 'tanba', 'kawachi'],
-        x: 350, y: 450
+        x: 460, y: 490
     },
     settsu: {
         id: 'settsu',
@@ -82,7 +82,7 @@ const TERRITORIES = {
         gold: 4000,
         troops: 1800,
         neighbors: ['kawachi', 'tanba', 'harima'],
-        x: 330, y: 460
+        x: 440, y: 500
     },
     bizen: {
         id: 'bizen',
@@ -92,7 +92,7 @@ const TERRITORIES = {
         gold: 2000,
         troops: 1200,
         neighbors: ['harima', 'bitchu', 'mimasaka'],
-        x: 300, y: 480
+        x: 390, y: 520
     },
     suo: {
         id: 'suo',
@@ -102,7 +102,7 @@ const TERRITORIES = {
         gold: 3000,
         troops: 2000,
         neighbors: ['nagato', 'aki', 'iwami'],
-        x: 250, y: 500
+        x: 330, y: 540
     },
     bungo: {
         id: 'bungo',
@@ -112,7 +112,7 @@ const TERRITORIES = {
         gold: 3000,
         troops: 2000,
         neighbors: ['buzen', 'hyuga', 'higo'],
-        x: 200, y: 580
+        x: 260, y: 620
     },
     hizen: {
         id: 'hizen',
@@ -122,7 +122,7 @@ const TERRITORIES = {
         gold: 2500,
         troops: 1500,
         neighbors: ['chikuzen', 'higo'],
-        x: 150, y: 560
+        x: 210, y: 600
     },
     satsuma: {
         id: 'satsuma',
@@ -132,7 +132,7 @@ const TERRITORIES = {
         gold: 2000,
         troops: 2500,
         neighbors: ['osumi', 'hyuga'],
-        x: 150, y: 650
+        x: 200, y: 700
     },
     mutsu: {
         id: 'mutsu',
@@ -142,7 +142,7 @@ const TERRITORIES = {
         gold: 2500,
         troops: 2500,
         neighbors: ['echigo', 'dewa'],
-        x: 500, y: 200
+        x: 620, y: 240
     },
     shinano: {
         id: 'shinano',
@@ -152,7 +152,7 @@ const TERRITORIES = {
         gold: 2000,
         troops: 1800,
         neighbors: ['kai', 'echigo', 'etchu', 'hida', 'mikawa', 'totomi'],
-        x: 460, y: 400
+        x: 560, y: 420
     },
     ise: {
         id: 'ise',
@@ -162,7 +162,7 @@ const TERRITORIES = {
         gold: 2500,
         troops: 1200,
         neighbors: ['owari', 'omi', 'shima', 'kii'],
-        x: 390, y: 480
+        x: 510, y: 510
     }
 };
 
@@ -171,7 +171,7 @@ const LORDS = {
     oda: {
         id: 'oda',
         name: '織田信長',
-        portrait: 'assets/portraits/oda.png',
+        portrait: 'assets/portraits/oda.svg',
         territories: ['owari'],
         gold: 3000,
         rice: 5000,
@@ -180,7 +180,7 @@ const LORDS = {
     takeda: {
         id: 'takeda',
         name: '武田信玄',
-        portrait: 'assets/portraits/takeda.png',
+        portrait: 'assets/portraits/takeda.svg',
         territories: ['kai', 'shinano'],
         gold: 4500,
         rice: 7500,
@@ -189,7 +189,7 @@ const LORDS = {
     uesugi: {
         id: 'uesugi',
         name: '上杉謙信',
-        portrait: 'assets/portraits/uesugi.png',
+        portrait: 'assets/portraits/uesugi.svg',
         territories: ['echigo'],
         gold: 3000,
         rice: 5000,
@@ -198,7 +198,7 @@ const LORDS = {
     tokugawa: {
         id: 'tokugawa',
         name: '徳川家康',
-        portrait: 'assets/portraits/tokugawa.png',
+        portrait: 'assets/portraits/tokugawa.svg',
         territories: ['mikawa'],
         gold: 2000,
         rice: 4000,
@@ -207,7 +207,7 @@ const LORDS = {
     date: {
         id: 'date',
         name: '伊達政宗',
-        portrait: 'assets/portraits/date.png',
+        portrait: 'assets/portraits/date.svg',
         territories: ['mutsu'],
         gold: 2500,
         rice: 5000,
@@ -216,7 +216,7 @@ const LORDS = {
     mori: {
         id: 'mori',
         name: '毛利元就',
-        portrait: 'assets/portraits/mori.png',
+        portrait: 'assets/portraits/mori.svg',
         territories: ['suo'],
         gold: 3000,
         rice: 4000,
@@ -225,7 +225,7 @@ const LORDS = {
     shimazu: {
         id: 'shimazu',
         name: '島津義久',
-        portrait: 'assets/portraits/shimazu.png',
+        portrait: 'assets/portraits/shimazu.svg',
         territories: ['satsuma'],
         gold: 2000,
         rice: 4000,
@@ -234,7 +234,7 @@ const LORDS = {
     saito: {
         id: 'saito',
         name: '斎藤道三',
-        portrait: 'assets/portraits/saito.png',
+        portrait: 'assets/portraits/saito.svg',
         territories: ['mino'],
         gold: 2500,
         rice: 4500,
@@ -243,7 +243,7 @@ const LORDS = {
     asai: {
         id: 'asai',
         name: '浅井長政',
-        portrait: 'assets/portraits/asai.png',
+        portrait: 'assets/portraits/asai.svg',
         territories: ['omi'],
         gold: 2500,
         rice: 4000,
@@ -252,7 +252,7 @@ const LORDS = {
     ashikaga: {
         id: 'ashikaga',
         name: '足利義昭',
-        portrait: 'assets/portraits/ashikaga.png',
+        portrait: 'assets/portraits/ashikaga.svg',
         territories: ['yamashiro'],
         gold: 5000,
         rice: 3000,
@@ -261,7 +261,7 @@ const LORDS = {
     miyoshi: {
         id: 'miyoshi',
         name: '三好長慶',
-        portrait: 'assets/portraits/miyoshi.png',
+        portrait: 'assets/portraits/miyoshi.svg',
         territories: ['settsu'],
         gold: 4000,
         rice: 3500,
@@ -270,7 +270,7 @@ const LORDS = {
     ukita: {
         id: 'ukita',
         name: '宇喜多直家',
-        portrait: 'assets/portraits/ukita.png',
+        portrait: 'assets/portraits/ukita.svg',
         territories: ['bizen'],
         gold: 2000,
         rice: 3000,
@@ -279,7 +279,7 @@ const LORDS = {
     otomo: {
         id: 'otomo',
         name: '大友宗麟',
-        portrait: 'assets/portraits/otomo.png',
+        portrait: 'assets/portraits/otomo.svg',
         territories: ['bungo'],
         gold: 3000,
         rice: 4500,
@@ -288,7 +288,7 @@ const LORDS = {
     ryuzoji: {
         id: 'ryuzoji',
         name: '龍造寺隆信',
-        portrait: 'assets/portraits/ryuzoji.png',
+        portrait: 'assets/portraits/ryuzoji.svg',
         territories: ['hizen'],
         gold: 2500,
         rice: 3500,
@@ -297,7 +297,7 @@ const LORDS = {
     kitabatake: {
         id: 'kitabatake',
         name: '北畠具教',
-        portrait: 'assets/portraits/kitabatake.png',
+        portrait: 'assets/portraits/kitabatake.svg',
         territories: ['ise'],
         gold: 2500,
         rice: 3500,
@@ -353,7 +353,8 @@ let gameState = {
     territories: {},
     lords: {},
     selectedTerritory: null,
-    gameLog: []
+    gameLog: [],
+    officerActions: {} // 武将の行動状態を管理 {officerId: {month: X, year: Y}}
 };
 
 // ========================================
@@ -372,7 +373,11 @@ function initGame() {
     document.getElementById('military-btn').addEventListener('click', showMilitaryModal);
     document.getElementById('diplomacy-btn').addEventListener('click', showDiplomacyModal);
     document.getElementById('save-btn').addEventListener('click', saveGame);
+    document.getElementById('mute-btn').addEventListener('click', toggleMute);
     document.getElementById('next-turn-btn').addEventListener('click', nextTurn);
+    
+    // BGMの開始
+    audioManager.playBGM('main');
     
     // モーダル閉じるボタン
     document.getElementById('close-internal-btn').addEventListener('click', closeModal);
@@ -424,8 +429,11 @@ function renderLordList() {
         card.className = 'lord-card';
         card.dataset.lordId = lord.id;
         
+        // portraitプロパティの画像パスを使用
+        const portraitUrl = lord.portrait;
+        
         card.innerHTML = `
-            <img src="${lord.portrait}" alt="${lord.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect fill=%22%238b4513%22 width=%22100%22 height=%22100%22/><text x=%2250%22 y=%2255%22 font-size=%2240%22 fill=%22%23f5e6d3%22 text-anchor=%22middle%22>将</text></svg>'">
+            <img src="${portraitUrl}" alt="${lord.name}">
             <h3>${lord.name}</h3>
             <p>領地: ${lord.territories.length}国</p>
         `;
@@ -436,6 +444,7 @@ function renderLordList() {
 }
 
 function selectLord(lordId) {
+    audioManager.playSE('select');
     document.querySelectorAll('.lord-card').forEach(card => {
         card.classList.remove('selected');
     });
@@ -465,62 +474,95 @@ function renderMap() {
     const svg = document.getElementById('japan-map');
     svg.innerHTML = '';
     
-    // 簡略化された日本地図をSVGで描画
+    // トランスフォーム用のグループを作成
+    const transformGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    transformGroup.setAttribute('id', 'map-transform-group');
+    svg.appendChild(transformGroup);
+    
+    // 背景の海（装飾）
+    const bgRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    bgRect.setAttribute('x', '0');
+    bgRect.setAttribute('y', '0');
+    bgRect.setAttribute('width', '800');
+    bgRect.setAttribute('height', '900');
+    bgRect.setAttribute('fill', '#87CEEB');
+    bgRect.setAttribute('opacity', '0.2');
+    transformGroup.appendChild(bgRect);
+    
+    // 実際の形状を使用して日本地図を描画
     Object.values(gameState.territories).forEach(territory => {
         const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         g.classList.add('territory-group');
         g.dataset.territoryId = territory.id;
         
-        // 円で国を表現（簡略版）
-        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('cx', territory.x);
-        circle.setAttribute('cy', territory.y);
-        circle.setAttribute('r', 35);
-        circle.classList.add('territory');
-        
-        // 支配者の色
-        const lord = gameState.lords[territory.owner];
-        const color = getLordColor(territory.owner);
-        circle.setAttribute('fill', color);
-        
-        // クリックイベント
-        circle.addEventListener('click', () => selectTerritory(territory.id));
-        
-        // ラベル
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('x', territory.x);
-        text.setAttribute('y', territory.y + 5);
-        text.setAttribute('text-anchor', 'middle');
-        text.classList.add('territory-label');
-        text.textContent = territory.name;
-        
-        g.appendChild(circle);
-        g.appendChild(text);
-        svg.appendChild(g);
+        const shape = TERRITORY_SHAPES[territory.id];
+        if (shape) {
+            // 地域の形状を描画
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', shape.path);
+            path.classList.add('territory-shape');
+            
+            // 支配者の色
+            const color = getLordColor(territory.owner);
+            path.setAttribute('fill', color);
+            path.setAttribute('stroke', '#654321');
+            path.setAttribute('stroke-width', '2.5');
+            
+            // クリックイベント
+            path.addEventListener('click', () => selectTerritory(territory.id));
+            
+            g.appendChild(path);
+            
+            // ラベル
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', shape.labelX);
+            text.setAttribute('y', shape.labelY);
+            text.setAttribute('text-anchor', 'middle');
+            text.setAttribute('dominant-baseline', 'middle');
+            text.classList.add('territory-label');
+            text.textContent = territory.name;
+            
+            g.appendChild(text);
+            transformGroup.appendChild(g);
+        } else {
+            // フォールバック: 円で表示
+            const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+            circle.setAttribute('cx', territory.x);
+            circle.setAttribute('cy', territory.y);
+            circle.setAttribute('r', 35);
+            circle.classList.add('territory-shape');
+            
+            const color = getLordColor(territory.owner);
+            circle.setAttribute('fill', color);
+            
+            circle.addEventListener('click', () => selectTerritory(territory.id));
+            
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', territory.x);
+            text.setAttribute('y', territory.y + 5);
+            text.setAttribute('text-anchor', 'middle');
+            text.classList.add('territory-label');
+            text.textContent = territory.name;
+            
+            g.appendChild(circle);
+            g.appendChild(text);
+            transformGroup.appendChild(g);
+        }
     });
     
-    // 隣接関係を線で表示
-    const drawnConnections = new Set();
-    Object.values(gameState.territories).forEach(territory => {
-        territory.neighbors.forEach(neighborId => {
-            const connectionKey = [territory.id, neighborId].sort().join('-');
-            if (!drawnConnections.has(connectionKey)) {
-                const neighbor = gameState.territories[neighborId];
-                if (neighbor) {
-                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                    line.setAttribute('x1', territory.x);
-                    line.setAttribute('y1', territory.y);
-                    line.setAttribute('x2', neighbor.x);
-                    line.setAttribute('y2', neighbor.y);
-                    line.setAttribute('stroke', '#4a2c1a');
-                    line.setAttribute('stroke-width', '2');
-                    line.setAttribute('opacity', '0.3');
-                    svg.insertBefore(line, svg.firstChild);
-                    drawnConnections.add(connectionKey);
-                }
-            }
-        });
-    });
+    // ズーム機能を初期化
+    initMapZoom();
+    
+    // ズームボタンのイベント設定
+    document.getElementById('zoom-in-btn').onclick = () => {
+        if (mapZoomControl) mapZoomControl.zoomIn();
+    };
+    document.getElementById('zoom-out-btn').onclick = () => {
+        if (mapZoomControl) mapZoomControl.zoomOut();
+    };
+    document.getElementById('zoom-reset-btn').onclick = () => {
+        if (mapZoomControl) mapZoomControl.reset();
+    };
 }
 
 function getLordColor(lordId) {
@@ -549,14 +591,15 @@ function getLordColor(lordId) {
 // ========================================
 
 function selectTerritory(territoryId) {
+    audioManager.playSE('click');
     gameState.selectedTerritory = territoryId;
     
     // 視覚的な選択表示
-    document.querySelectorAll('.territory').forEach(t => {
+    document.querySelectorAll('.territory-shape').forEach(t => {
         t.classList.remove('selected');
     });
     
-    const selectedElement = document.querySelector(`[data-territory-id="${territoryId}"] .territory`);
+    const selectedElement = document.querySelector(`[data-territory-id="${territoryId}"] .territory-shape`);
     if (selectedElement) {
         selectedElement.classList.add('selected');
     }
@@ -607,13 +650,27 @@ function updateUI() {
     // プレイヤー情報
     document.getElementById('player-name').textContent = playerLord.name;
     document.getElementById('player-portrait').src = playerLord.portrait;
-    document.getElementById('player-portrait').onerror = function() {
-        this.src = "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%238b4513' width='100' height='100'/><text x='50' y='55' font-size='40' fill='%23f5e6d3' text-anchor='middle'>将</text></svg>";
-    };
     
     // 資源表示
     document.getElementById('player-gold').textContent = playerLord.gold;
     document.getElementById('player-rice').textContent = playerLord.rice;
+}
+
+// ========================================
+// 武将の行動管理
+// ========================================
+
+function hasOfficerActedThisMonth(officerId) {
+    const action = gameState.officerActions[officerId];
+    if (!action) return false;
+    return action.year === gameState.currentYear && action.month === gameState.currentMonth;
+}
+
+function recordOfficerAction(officerId) {
+    gameState.officerActions[officerId] = {
+        year: gameState.currentYear,
+        month: gameState.currentMonth
+    };
 }
 
 // ========================================
@@ -647,14 +704,29 @@ function renderOfficerList() {
         div.className = 'officer-item';
         div.dataset.officerId = officerId;
         
+        // 今月既に行動したかチェック
+        const hasActed = hasOfficerActedThisMonth(officerId);
+        if (hasActed) {
+            div.classList.add('acted');
+        }
+        
+        const portraitUrl = portraitGenerator.generatePortrait(officerId);
+        
         div.innerHTML = `
-            <p class="officer-name">${officer.name}</p>
-            <p>戦: ${officer.war}</p>
-            <p>知: ${officer.int}</p>
-            <p>政: ${officer.pol}</p>
+            <img src="${portraitUrl}" class="officer-portrait" alt="${officer.name}">
+            <div class="officer-info">
+                <p class="officer-name">${officer.name}${hasActed ? ' (行動済)' : ''}</p>
+                <p>戦: ${officer.war} 知: ${officer.int} 政: ${officer.pol}</p>
+            </div>
         `;
         
         div.addEventListener('click', () => {
+            if (hasActed) {
+                audioManager.playSE('click');
+                alert('この武将は今月既に行動しました');
+                return;
+            }
+            audioManager.playSE('select');
             document.querySelectorAll('.officer-item').forEach(item => {
                 item.classList.remove('selected');
             });
@@ -673,11 +745,20 @@ function renderOfficerList() {
 function executeInternal(action) {
     const selectedOfficer = document.querySelector('.officer-item.selected');
     if (!selectedOfficer) {
+        audioManager.playSE('click');
         alert('武将を選択してください');
         return;
     }
     
     const officerId = selectedOfficer.dataset.officerId;
+    
+    // 武将が今月既に行動しているかチェック
+    if (hasOfficerActedThisMonth(officerId)) {
+        audioManager.playSE('click');
+        alert('この武将は今月既に行動しました');
+        return;
+    }
+    
     const officer = OFFICERS[officerId];
     const territory = gameState.territories[gameState.selectedTerritory];
     const playerLord = gameState.lords[gameState.playerLordId];
@@ -691,15 +772,18 @@ function executeInternal(action) {
             case 'agriculture':
                 const riceIncrease = Math.floor(500 + officer.pol * 10);
                 territory.rice += riceIncrease;
+                audioManager.playSE('coin');
                 addLog(`${territory.name}で${officer.name}が農業開発を実施。石高+${riceIncrease}`);
                 break;
             case 'commerce':
                 const goldIncrease = Math.floor(300 + officer.pol * 5);
                 territory.gold += goldIncrease;
                 playerLord.gold += goldIncrease;
+                audioManager.playSE('coin');
                 addLog(`${territory.name}で${officer.name}が商業発展を実施。金+${goldIncrease}`);
                 break;
             case 'security':
+                audioManager.playSE('coin');
                 addLog(`${territory.name}で${officer.name}が治安維持を実施。民忠上昇`);
                 break;
             case 'recruit':
@@ -708,14 +792,23 @@ function executeInternal(action) {
                     const troopIncrease = Math.floor(300 + officer.pol * 3);
                     territory.troops += troopIncrease;
                     playerLord.gold -= cost;
+                    audioManager.playSE('coin');
                     addLog(`${territory.name}で${officer.name}が兵士募集を実施。兵+${troopIncrease}`);
                 } else {
+                    audioManager.playSE('click');
                     addLog(`金が不足しています`, true);
+                    return; // 失敗時は行動を記録しない
                 }
                 break;
         }
+        
+        // 武将の行動を記録
+        recordOfficerAction(officerId);
     } else {
+        audioManager.playSE('click');
         addLog(`${territory.name}での${officer.name}の内政が失敗しました`);
+        // 失敗しても行動を消費する
+        recordOfficerAction(officerId);
     }
     
     closeModal();
@@ -791,12 +884,29 @@ function renderCommanderList() {
         div.className = 'commander-item';
         div.dataset.officerId = officerId;
         
+        // 今月既に行動したかチェック
+        const hasActed = hasOfficerActedThisMonth(officerId);
+        if (hasActed) {
+            div.classList.add('acted');
+        }
+        
+        const portraitUrl = portraitGenerator.generatePortrait(officerId);
+        
         div.innerHTML = `
-            <p class="officer-name">${officer.name}</p>
-            <p>戦: ${officer.war}</p>
+            <img src="${portraitUrl}" class="officer-portrait-small" alt="${officer.name}">
+            <div>
+                <p class="officer-name">${officer.name}${hasActed ? ' (行動済)' : ''}</p>
+                <p>戦: ${officer.war}</p>
+            </div>
         `;
         
         div.addEventListener('click', () => {
+            if (hasActed) {
+                audioManager.playSE('click');
+                alert('この武将は今月既に行動しました');
+                return;
+            }
+            audioManager.playSE('select');
             document.querySelectorAll('.commander-item').forEach(item => {
                 item.classList.remove('selected');
             });
@@ -812,31 +922,47 @@ function executeAttack() {
     const selectedCommander = document.querySelector('.commander-item.selected');
     
     if (!selectedTarget) {
+        audioManager.playSE('click');
         alert('攻撃対象を選択してください');
         return;
     }
     
     if (!selectedCommander) {
+        audioManager.playSE('click');
         alert('指揮官を選択してください');
+        return;
+    }
+    
+    const commanderId = selectedCommander.dataset.officerId;
+    
+    // 武将が今月既に行動しているかチェック
+    if (hasOfficerActedThisMonth(commanderId)) {
+        audioManager.playSE('click');
+        alert('この武将は今月既に行動しました');
         return;
     }
     
     const troopCount = parseInt(document.getElementById('troop-count').value);
     if (troopCount <= 0) {
+        audioManager.playSE('click');
         alert('出兵数を入力してください');
         return;
     }
     
     const sourceTerritory = gameState.territories[gameState.selectedTerritory];
     if (troopCount > sourceTerritory.troops) {
+        audioManager.playSE('click');
         alert('兵数が不足しています');
         return;
     }
     
     const targetId = selectedTarget.dataset.targetId;
-    const commanderId = selectedCommander.dataset.officerId;
     
+    audioManager.playSE('battle');
     performBattle(sourceTerritory.id, targetId, troopCount, commanderId);
+    
+    // 武将の行動を記録
+    recordOfficerAction(commanderId);
 }
 
 function performBattle(sourceId, targetId, attackTroops, commanderId) {
@@ -872,6 +998,7 @@ function performBattle(sourceId, targetId, attackTroops, commanderId) {
         enemyLord.territories = enemyLord.territories.filter(t => t !== targetId);
         playerLord.territories.push(targetId);
         
+        audioManager.playSE('victory');
         resultHtml += `<p class="victory">勝利！</p>`;
         resultHtml += `<p>${target.name}を占領しました</p>`;
         resultHtml += `<p>損失: ${attackLosses}</p>`;
@@ -937,6 +1064,8 @@ function renderDiplomacyList() {
 // ========================================
 
 function nextTurn() {
+    audioManager.playSE('turn');
+    
     gameState.currentMonth++;
     if (gameState.currentMonth > 12) {
         gameState.currentMonth = 1;
@@ -1124,12 +1253,25 @@ function recruitTroops(territoryId) {
         const increase = 500;
         territory.troops += increase;
         playerLord.gold -= cost;
+        audioManager.playSE('coin');
         addLog(`${territory.name}で兵士を募集。兵+${increase}`);
         updateUI();
         updateTerritoryInfo();
     } else {
+        audioManager.playSE('click');
         alert('金が不足しています');
     }
+}
+
+// ========================================
+// 音声システム
+// ========================================
+
+function toggleMute() {
+    const isMuted = audioManager.toggleMute();
+    const btn = document.getElementById('mute-btn');
+    btn.textContent = isMuted ? '🔇' : '🔊';
+    audioManager.playSE('click');
 }
 
 // ========================================
