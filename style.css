@@ -270,6 +270,7 @@ body {
     width: 100%;
     height: 100%;
     cursor: grab;
+    background: radial-gradient(ellipse at center, #a8d8ea 0%, #7eb7d4 40%, #5a9ec2 100%);
 }
 
 #japan-map:active {
@@ -279,32 +280,35 @@ body {
 .territory-shape {
     cursor: pointer;
     transition: all 0.3s;
-    opacity: 0.85;
-    stroke: #654321;
-    stroke-width: 2.5;
+    opacity: 0.92;
+    stroke: #3d2817;
+    stroke-width: 2;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
 }
 
 .territory-shape:hover {
-    filter: brightness(1.3);
+    filter: brightness(1.25) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     stroke: #ffd700;
-    stroke-width: 4;
+    stroke-width: 3.5;
     opacity: 1;
 }
 
 .territory-shape.selected {
     stroke: #ffd700;
-    stroke-width: 5;
-    filter: brightness(1.2) drop-shadow(0 0 8px rgba(255, 215, 0, 0.8));
+    stroke-width: 4.5;
+    filter: brightness(1.2) drop-shadow(0 0 12px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
     opacity: 1;
 }
 
 .territory-label {
     pointer-events: none;
-    font-size: 14px;
-    fill: #2c1810;
-    text-shadow: 1px 1px 2px #fff, -1px -1px 2px #fff, 1px -1px 2px #fff, -1px 1px 2px #fff;
+    font-size: 13px;
+    fill: #1a0f0a;
+    text-shadow: 1px 1px 0px #fff, -1px -1px 0px #fff, 1px -1px 0px #fff, -1px 1px 0px #fff,
+                 0px 1px 0px #fff, 0px -1px 0px #fff, 1px 0px 0px #fff, -1px 0px 0px #fff,
+                 2px 2px 3px rgba(255, 255, 255, 0.8);
     font-weight: bold;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
 /* 情報パネル */
@@ -484,6 +488,26 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     text-align: center;
+    position: relative;
+}
+
+.internal-cmd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-height: 85px;
+    justify-content: center;
+}
+
+.preview-effect {
+    display: block;
+    font-size: 0.85rem;
+    color: #90ee90;
+    font-weight: bold;
+    margin-top: 5px;
+    text-shadow: 0 0 5px rgba(144, 238, 144, 0.5);
+    animation: pulse 1.5s ease-in-out infinite;
 }
 
 .officer-item, .commander-item {
@@ -674,6 +698,18 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #a0522d;
+}
+
+/* アニメーション */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: scale(1.05);
+    }
 }
 
 /* レスポンシブ */
